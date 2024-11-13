@@ -44,21 +44,38 @@ nav a:hover {
 }
 
 /* Main Content Styling */
+/* Center-align the text in the gallery section */
 .gallery {
-  margin-right: 200px; /* Offset to allow for the nav sidebar */
+  text-align: center;
+  margin: 0 auto;
+  max-width: 600px; /* Optional: Limit the width for better readability */
   padding: 20px;
 }
 
+.gallery h1, .gallery h2{
+  margin-bottom: 40px; /* Add space between elements */
+}
+
+.gallery h2, .gallery p{
+  margin-bottom: 20px; /* Add space between elements */
+}
+
 .gallery h1 {
+  font-size: 6em; /* Adjust size as needed */
+  color: #333;
+  font-family: "Edwardian Script ITC";
+}
+
+.gallery h2 {
   font-size: 2em;
-  margin-bottom: 10px;
-  padding-top: 60px;
+  color: #555;
 }
 
 .gallery p {
   font-size: 1.2em;
   color: #666;
 }
+
 /* Basic Reset */
 * {
   margin: 0;
@@ -71,7 +88,11 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #f0f0f0;
+  background-image: url('waves.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 /* Slideshow Container Styling */
@@ -101,11 +122,52 @@ body {
   from { opacity: 0.4; }
   to { opacity: 1; }
 }
+/* Artists Section - Initially Hidden */
+/* Main Gallery Section - Hide when Artists are visible */
+/* Artists Container */
+/* Artists Section - Initially Hidden */
+/* Artists Container */
+.artists-container {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-items: center; /* Center items horizontally */
+  align-items: center;   /* Center items vertically */
+  grid-gap: 20px; /* Add space between grid items */
+}
 
-body {
-  background-image: url('waves.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+/* Artist Image Styling */
+.artist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.2em;
+  color: white;
+}
+
+.artist-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px; /* Space between image and name */
+}
+
+/* Unique Backgrounds for Each Artist */
+#vangogh { background-color: lightgray; }
+#picasso { background-color: darkgray; }
+#davinci { background-color: darkgray; }
+#ross { background-color: lightgray; }
+
+.artist p {
+  font-weight: bold;
+  font-size: 1.2em;
 }
