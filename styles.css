@@ -122,27 +122,39 @@ body {
   from { opacity: 0.4; }
   to { opacity: 1; }
 }
-/* Artists Section - Initially Hidden */
-/* Main Gallery Section - Hide when Artists are visible */
-/* Artists Container */
-/* Artists Section - Initially Hidden */
-/* Artists Container */
+/* Hide gallery section when artists are visible */
+#gallery {
+  display: block; /* Default: shown initially */
+}
+
+/* Artists Section */
 .artists-container {
-  display: none; /* Hidden by default */
+  display: none; /* Initially hidden */
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 80vh; /* Make the container take up the full viewport height */
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr); /* Create 4 equal-width columns */
+  grid-template-rows: repeat(2, 1fr); /* Create 2 equal-height rows */
   justify-items: center; /* Center items horizontally */
   align-items: center;   /* Center items vertically */
-  grid-gap: 20px; /* Add space between grid items */
+  gap: 20px; /* Add space between grid items */
 }
 
-/* Artist Image Styling */
+/* Centered Message */
+.center-message {
+  grid-column: span 4; /* Span across the entire grid */
+  text-align: center;
+  font-size: 5em;
+  font-weight: bold;
+  font-family: "Edwardian Script ITC";
+  color: brown;
+  margin-bottom: 40px; /* Optional: Add some margin between the message and the artist items */
+}
+
+/* Artist Styling */
 .artist {
   display: flex;
   flex-direction: column;
@@ -150,22 +162,34 @@ body {
   justify-content: center;
   text-align: center;
   font-size: 1.2em;
-  color: white;
+  color: brown;
+  width: 250px; /* Define width for each artist item */
+  height: 250px; /* Define height for each artist item */
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for each item */
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Add some shadow for depth */
+  transition: transform 0.3s ease; /* Add smooth transition effect on hover */
 }
 
+.artist:hover {
+  transform: scale(1.05); /* Slightly scale the item on hover */
+}
+
+/* Artist Image Styling */
 .artist-img {
   width: 150px;
   height: 150px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 10px; /* Space between image and name */
+  margin-bottom: 10px;
 }
 
-/* Unique Backgrounds for Each Artist */
+/* Artist Unique Backgrounds */
 #vangogh { background-color: lightgray; }
 #picasso { background-color: darkgray; }
-#davinci { background-color: darkgray; }
-#ross { background-color: lightgray; }
+#davinci { background-color: lightgray; }
+#ross { background-color: darkgray; }
 
 .artist p {
   font-weight: bold;
