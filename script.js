@@ -1,18 +1,46 @@
+// Slideshow Functionality
 let slideIndex = 0;
 showSlides();
 
 function showSlides() {
-  let slides = document.getElementsByClassName("slide");
-  // Hide all slides initially
+  const slides = document.getElementsByClassName("slide");
   for (let i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
-  // Increment the slide index
   slideIndex++;
-  // Reset to the first slide if it exceeds the number of slides
-  if (slideIndex > slides.length) { slideIndex = 1 }
-  // Display the current slide
+  if (slideIndex > slides.length) { slideIndex = 1; }
   slides[slideIndex - 1].style.display = "block";
-  // Change slide every 3 seconds
-  setTimeout(showSlides, 3000);
+  setTimeout(showSlides, 3000); // Change image every 3 seconds
 }
+
+// Ensure slideshow is visible on page load, and artists section is hidden
+// Toggle Artists Section
+document.addEventListener("DOMContentLoaded", function() {
+  const artistsLink = document.getElementById("artists-link");
+  const gallerySection = document.getElementById("gallery");
+  const artistsSection = document.getElementById("artists-section");
+  const slideshowContainer = document.querySelector(".slideshow-container");
+
+  // By default, show the slideshow, hide artists
+  slideshowContainer.style.display = "block";
+  artistsSection.style.display = "none";
+
+  // Toggle artists section visibility on "Artists" link click
+  artistsLink.addEventListener("click", function(event) {
+    event.preventDefault();
+    gallerySection.style.display = "none";  // Hide the main gallery content
+    artistsSection.style.display = "grid";  // Show artists section
+    slideshowContainer.style.display = "none"; // Hide slideshow
+  });
+
+  // Hide artists section and show main gallery content when clicking outside of it
+  document.addEventListener("click", function(event) {
+    if (!artistsSection.contains(event.target) && event.target !== artistsLink) {
+      artistsSection.style.display = "none"; // Hide artists section
+      gallerySection.style.display = "block"; // Show gallery content
+      slideshowContainer.style.display = "block"; // Show slideshow
+    }
+  });
+});
+
+
