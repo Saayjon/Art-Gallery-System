@@ -1,0 +1,111 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navigation Container Styling */
+.nav-container {
+  position: fixed;
+  top: 5px;
+  background-color: #eeeeee;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  z-index: 100;
+}
+
+/* Navigation Bar Styling */
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  margin-bottom: 15px
+  margin-right: 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+  padding : 8px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover Effect for Links */
+nav a:hover {
+  background-color: #333;
+  color: #ffffff;
+}
+
+/* Main Content Styling */
+.gallery {
+  margin-right: 200px; /* Offset to allow for the nav sidebar */
+  padding: 20px;
+}
+
+.gallery h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  padding-top: 60px;
+}
+
+.gallery p {
+  font-size: 1.2em;
+  color: #666;
+}
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+}
+
+/* Slideshow Container Styling */
+.slideshow-container {
+  position: relative;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* Slide Styling */
+.slide {
+  display: none; /* Hide all slides initially */
+}
+
+.slide img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Animation for Fading */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from { opacity: 0.4; }
+  to { opacity: 1; }
+}
+
+body {
+  background-image: url('waves.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
