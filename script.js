@@ -1,3 +1,4 @@
+// Slideshow functionality
 let slideIndex = 0;
 showSlides();
 
@@ -13,48 +14,35 @@ function showSlides() {
 }
 
 // Ensure slideshow is visible on page load, and artists section is hidden
-// Toggle Artists Section
 document.addEventListener("DOMContentLoaded", function() {
   const artistsLink = document.getElementById("artists-link");
-  const gallerySection = document.getElementById("gallery");
+  const homeLink = document.getElementById("home-link");
+  const contactLink = document.getElementById("contact-link");
+  const mainContent = document.getElementById("main-content");
   const artistsSection = document.getElementById("artists-section");
-  const slideshowContainer = document.querySelector(".slideshow-container");
+  const contactSection = document.getElementById("contact-section");
 
-  // By default, show the slideshow, hide artists
-  slideshowContainer.style.display = "block";
+  // Initial state: show main content, hide artists section
+  mainContent.style.display = "flex";
   artistsSection.style.display = "none";
 
-  // Toggle artists section visibility on "Artists" link click
+  // Show artists section and hide main content when "Artists" is clicked
   artistsLink.addEventListener("click", function(event) {
     event.preventDefault();
-    gallerySection.style.display = "none";  // Hide the main gallery content
+    mainContent.style.display = "none";  // Hide main content
     artistsSection.style.display = "grid";  // Show artists section
-    slideshowContainer.style.display = "none"; // Hide slideshow
   });
 
-  // Hide artists section and show main gallery content when clicking outside of it
-  document.addEventListener("click", function(event) {
-    if (!artistsSection.contains(event.target) && event.target !== artistsLink) {
-      artistsSection.style.display = "none"; // Hide artists section
-      gallerySection.style.display = "block"; // Show gallery content
-      slideshowContainer.style.display = "block"; // Show slideshow
-    }
+  // Show main content and hide artists section when "Home" is clicked
+  homeLink.addEventListener("click", function(event) {
+    event.preventDefault();
+    mainContent.style.display = "flex"; // Reset to flex layout
+    artistsSection.style.display = "none";  // Hide artists section
   });
-});
 
-document.getElementById("home-link").addEventListener("click", () => {
-  document.getElementById("gallery").style.display = "block";
-  document.getElementById("artists-section").style.display = "none";
-});
-
-document.getElementById("artists-link").addEventListener("click", () => {
-  document.getElementById("gallery").style.display = "none";
-  document.getElementById("artists-section").style.display = "grid";
-});
-
-
-const contactLink = document.getElementById('contact-link');
-
-contactLink.addEventListener('click', function(event) {
-  document.getElementById('contact-section').scrollIntoView({ behavior: 'smooth' });
+  // Smooth scroll to the contact section when "Contact" is clicked
+  contactLink.addEventListener("click", function(event) {
+    event.preventDefault();
+    contactSection.scrollIntoView({ behavior: 'smooth' });
+  });
 });
