@@ -1,4 +1,3 @@
-// Slideshow Functionality
 let slideIndex = 0;
 showSlides();
 
@@ -43,4 +42,12 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
+document.getElementById("home-link").addEventListener("click", () => {
+  document.getElementById("gallery").style.display = "block";
+  document.getElementById("artists-section").style.display = "none";
+});
 
+document.getElementById("artists-link").addEventListener("click", () => {
+  document.getElementById("gallery").style.display = "none";
+  document.getElementById("artists-section").style.display = "grid";
+});
