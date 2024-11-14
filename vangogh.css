@@ -1,6 +1,8 @@
 /* Center the main title */
 h1 {
     text-align: center;
+    font-family: "Edwardian Script ITC";
+    font-size: 5em;
   }
   
 /* Container for the main content */
