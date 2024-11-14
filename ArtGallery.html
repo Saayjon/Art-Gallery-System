@@ -11,8 +11,8 @@
   <!-- Sidebar Navigation -->
   <div class="nav-container">
     <nav>
-        <a href="#home">Home</a> &nbsp;
-       <a href="#artists" id="artists-link">Artists</a> &nbsp;
+        <a href="#home" id="home-link">Home</a> &nbsp;
+        <a href="#artists" id="artists-link">Artists</a> &nbsp;
         <a href="#marketplace">Marketplace</a> &nbsp;
         <a href="#about">About</a> &nbsp;
         <a href="#contact">Contact</a>
@@ -21,38 +21,41 @@
 
   <!-- Main Content Section -->
   <section id="gallery" class="gallery">
-    <h1> Star Art Gallery </h1>
-    <h2>Welcome to the Art Gallery</h1>
+    <h1>Star Art Gallery</h1>
+    <h2>Welcome to the Art Gallery</h2>
     <p>Explore a collection of beautiful artwork.</p>
-    <!-- Add gallery items here -->
   </section>
 
- <!-- Artists Section -->
-<div id="artists-section" class="artists-container">
-  <div class="center-message">
-    <p>Explore some of the popular artists</p>
+  <!-- Artists Section -->
+  <div id="artists-section" class="artists-container">
+    <div class="center-message">
+      <p>Explore some of the popular artists</p>
+    </div>
+    
+    <!-- Clickable Artist Divs -->
+    <a href="vangogh.html" class="artist" id="vangogh">
+      <img src="vangogh1.webp" alt="Vincent van Gogh" class="artist-img">
+      <p>Vincent van Gogh</p>
+    </a>
+    
+    <a href="picasso.html" class="artist" id="picasso">
+      <img src="picasso.jpg" alt="Pablo Picasso" class="artist-img">
+      <p>Pablo Picasso</p>
+    </a>
+    
+    <a href="davinci.html" class="artist" id="davinci">
+      <img src="leonardo.jpg" alt="Leonardo da Vinci" class="artist-img">
+      <p>Leonardo da Vinci</p>
+    </a>
+    
+    <a href="ross.html" class="artist" id="ross">
+      <img src="ross.jpg" alt="Bob Ross" class="artist-img">
+      <p>Bob Ross</p>
+    </a>
   </div>
-  <div id="vangogh" class="artist">
-    <img src="vangogh1.webp" alt="Vincent van Gogh" class="artist-img">
-    <p>Vincent van Gogh</p>
-  </div>
-  <div id="picasso" class="artist">
-    <img src="picasso.jpg" alt="Pablo Picasso" class="artist-img">
-    <p>Pablo Picasso</p>
-  </div>
-  <div id="davinci" class="artist">
-    <img src="leonardo.jpg" alt="Leonardo da Vinci" class="artist-img">
-    <p>Leonardo da Vinci</p>
-  </div>
-  <div id="ross" class="artist">
-    <img src="ross.jpg" alt="Bob Ross" class="artist-img">
-    <p>Bob Ross</p>
-  </div>
-</div>
-
-
   
-<div class="slideshow-container">
+  <!-- Slideshow Container -->
+  <div class="slideshow-container">
     <div class="slide fade">
       <img src="davinci.jpeg" alt="Art 1">
     </div>
