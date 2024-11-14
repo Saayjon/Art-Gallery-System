@@ -1,0 +1,49 @@
+/* Center the main title */
+h1 {
+    text-align: center;
+    font-family: "Edwardian Script ITC";
+    font-size: 5em;
+  }
+
+  
+/* Container for the main content */
+.content-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    text-align: center;
+  }
+  
+  /* Styling for the artwork items */
+  .artwork-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .artwork-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .artwork-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .artwork-description h2 {
+    margin-top: 15px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .artwork-description p {
+    font-size: 16px;
+    color: #555;
+  }
