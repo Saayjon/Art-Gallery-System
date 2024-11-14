@@ -51,3 +51,10 @@ document.getElementById("artists-link").addEventListener("click", () => {
   document.getElementById("gallery").style.display = "none";
   document.getElementById("artists-section").style.display = "grid";
 });
+
+
+const contactLink = document.getElementById('contact-link');
+
+contactLink.addEventListener('click', function(event) {
+  document.getElementById('contact-section').scrollIntoView({ behavior: 'smooth' });
+});
