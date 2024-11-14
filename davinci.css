@@ -1,6 +1,8 @@
 /* Center the main title */
 h1 {
     text-align: center;
+    font-family: "Edwardian Script ITC";
+    font-size: "5em";
   }
   
 /* Container for the main content */
@@ -34,26 +36,24 @@ h1 {
   }
   
   .artwork-description h2 {
-    margin-top: 15px;
-    font-size: 24px;
-    color: #333;
+    max-width: 600px; 
+    margin: 0 auto;   
+    padding: 10px;    
+    text-align: center;
   }
   
   .artwork-description p {
-    font-size: 16px;
-    color: #555;
+    max-width: 600px; 
+    margin: 0 auto;   
+    padding: 10px;    
+    text-align: center;
   }
   
-  /* Media query for larger screens to display items in a row */
-  @media (min-width: 768px) {
-    .artwork-container {
-      flex-direction: row;
-      flex-wrap: wrap;
-    }
+
   
     .artwork-item {
       flex: 1 1 calc(50% - 20px);
       margin: 10px;
     }
-  }
+  
   
