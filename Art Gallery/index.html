@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Art Gallery</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Sidebar Navigation -->
+  <div class="nav-container">
+    <nav>
+        <a href="#home" id="home-link">Home</a> &nbsp;
+        <a href="#artists" id="artists-link">Artists</a> &nbsp;
+        <a href="explore.php">Explore</a> &nbsp;
+        <a href="upload.html">Upload</a> &nbsp;
+        <a href="#contact" id ="contact-link">Contact</a>
+    </nav>
+  </div>
+
+  <!-- Main Content Section -->
+  <section id="main-content" class="main-content">
+    <div class="text-section">
+      <h1>Star Art Gallery</h1>
+      <h2>Welcome to the Art Gallery</h2>
+      <p>Explore a collection of beautiful artwork.</p>
+    </div>
+    <div class="slideshow-container">
+      <div class="slide fade">
+        <img src="davinci.jpeg" alt="Art 1">
+      </div>
+      <div class="slide fade">
+        <img src="vangogh.jpg" alt="Art 2">
+      </div>
+      <div class="slide fade">
+        <img src="pablo.jpg" alt="Art 3">
+      </div>
+    </div>
+  </section>
+
+  <!-- Artists Section -->
+  <div id="artists-section" class="artists-container">
+    <div class="center-message">
+      <p>Explore some of the popular artists</p>
+    </div>
+    
+    <!-- Clickable Artist Divs -->
+    <a href="vangogh.html" class="artist" id="vangogh">
+      <img src="vangogh1.webp" alt="Vincent van Gogh" class="artist-img">
+      <p>Vincent van Gogh</p>
+    </a>
+    
+    <a href="picasso.html" class="artist" id="picasso">
+      <img src="picasso.jpg" alt="Pablo Picasso" class="artist-img">
+      <p>Pablo Picasso</p>
+    </a>
+    
+    <a href="davinci.html" class="artist" id="davinci">
+      <img src="leonardo.jpg" alt="Leonardo da Vinci" class="artist-img">
+      <p>Leonardo da Vinci</p>
+    </a>
+    
+    <a href="Bob.html" class="artist" id="ross">
+      <img src="ross.jpg" alt="Bob Ross" class="artist-img">
+      <p>Bob Ross</p>
+    </a>
+  </div>
+  
+
+
+  <section id = "contact-section" class = "contact">
+    <h2>Contact us</h2>
+    <p>We would love to hear from you! Reach out to us through the following:</p>
+    <p>Email: contact@starartgallery.com</p>
+    <p>Address: 123 Art Street, Oshawa, Canada</p>
+    <p>Phone: (647) - 123 - 456</p>
+  </section>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
