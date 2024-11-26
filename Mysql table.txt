@@ -1,0 +1,7 @@
+CREATE TABLE artworks (
+    id INT AUTO_INCREMENT PRIMARY KEY,         -- Unique ID for each entry
+    first_name VARCHAR(255) NOT NULL,          -- User's first name
+    last_name VARCHAR(255) NOT NULL,           -- User's last name
+    file_path VARCHAR(255) NOT NULL,           -- Path to the uploaded file
+    uploaded_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP -- Timestamp of upload
+);
